@@ -1,0 +1,23 @@
+# SiteCommission Pro
+
+Offline-first PWA for PLC/automation commissioning of industrial washing installations.
+
+## Run
+1. Generate icons and favicon: `python3 make_icons.py`
+2. Serve over HTTPS or localhost: `python3 -m http.server 8080`
+3. Open the URL once **while online** so the service worker caches the shell and the Tailwind CDN script, then use it offline or install it via "Add to Home Screen".
+
+## Features
+- Dashboard with Online/Offline indicator
+- 5-section commissioning checklist, saved instantly to IndexedDB
+- Siemens S7/TIA fault database with search and step-by-step resolutions
+- Photo capture, red-line markup, notes, timestamps
+- SAT report: preview, print/PDF, download HTML, Web Share / email
+- Activity log of every checklist action
+
+## Notes
+- Mock OCR is simulated. For real OCR, bundle Tesseract.js locally and add it to the `STATIC` list in `sw.js`.
+- The fault database is a field aid; verify against Siemens documentation.
+- Bump `VER` in `sw.js` whenever you change any file, so clients pick up updates.
+- For fully guaranteed offline styling, self-host Tailwind. Core layout already works from `style.css` alone.
+- Data lives in the browser's IndexedDB. Export reports regularly; clearing site data deletes everything.
