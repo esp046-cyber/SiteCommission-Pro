@@ -1,1 +1,30 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>SiteCommission Pro</title>
+<meta name="theme-color" content="#0f172a">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<header>
+  <h1>SiteCommission <span>Pro</span></h1>
+  <span id="net" class="pill"><i></i><b>Checking…</b></span>
+  <button id="theme" class="ib" aria-label="Toggle theme">◐</button>
+</header>
+<main id="view"></main>
+<nav>
+  <button data-v="home" class="on">🏠<small>Home</small></button>
+  <button data-v="check">✔<small>Checklists</small></button>
+  <button data-v="fault">⚠<small>Faults</small></button>
+  <button data-v="media">📷<small>Media</small></button>
+  <button data-v="report">📄<small>Report</small></button>
+</nav>
+<script src="app.js"></script>
+</body>
+</html>
